@@ -1,6 +1,7 @@
 package com.felixalguzman.raeapi.config;
 
 public class UDRAEConfig {
+
     private int cacheDuration;
     private int offlineCacheDuration;
     private int cacheSize;
@@ -10,14 +11,14 @@ public class UDRAEConfig {
     private UDRAEConfig() {
     }
 
-    private UDRAEConfig(int cacheDuration, int offlineCacheDuration, int cacheSize,
-                        int connectTimeout, String cacheFolderName) {
+    private UDRAEConfig(int cacheDuration, int offlineCacheDuration, int cacheSize, int connectTimeout, String cacheFolderName) {
         this.cacheDuration = cacheDuration;
         this.offlineCacheDuration = offlineCacheDuration;
         this.cacheSize = cacheSize;
         this.connectTimeout = connectTimeout;
         this.cacheFolderName = cacheFolderName;
     }
+
 
     public static UDRAEConfig getDefaultUDRAEConfig() {
         return new UDRAEConfig.Builder().apply();
@@ -43,7 +44,9 @@ public class UDRAEConfig {
         return cacheFolderName;
     }
 
+
     public static class Builder {
+
         private int cacheDuration = 30; // 30 days
         private int offlineCacheDuration = 180; // 180 days
         private int cacheSize = 10_485_760; // 10 MiB

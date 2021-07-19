@@ -2,7 +2,6 @@ package com.felixalguzman.raeapi.config;
 
 import com.felixalguzman.raeapi.Constants;
 import com.felixalguzman.raeapi.api.Api;
-import com.felixalguzman.raeapi.config.UDRAEConfig;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import okhttp3.*;
@@ -11,10 +10,8 @@ import org.springframework.stereotype.Service;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
-
 import java.util.Base64;
 import java.util.concurrent.TimeUnit;
-
 
 @Service
 public class WebService {
@@ -26,6 +23,7 @@ public class WebService {
 
 
     WebService() {
+
         this.udraeConfig = UDRAEConfig.getDefaultUDRAEConfig();
         Gson gson = new GsonBuilder()
                 .setLenient()
@@ -39,11 +37,13 @@ public class WebService {
     }
 
     public String getBAHeader() {
+
         return "Basic " + Base64.getEncoder().encodeToString("p682JghS3:aGfUdCiE434".getBytes());
     }
 
 
     private OkHttpClient provideOkHttpClient() {
+
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
         logging.setLevel(HttpLoggingInterceptor.Level.BODY);
 

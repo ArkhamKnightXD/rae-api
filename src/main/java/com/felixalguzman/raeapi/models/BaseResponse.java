@@ -1,7 +1,6 @@
 package com.felixalguzman.raeapi.models;
 
 import lombok.Data;
-
 import java.util.ArrayList;
 
 /**
@@ -47,8 +46,6 @@ public class BaseResponse {
          * En caso de haber varios resultados, grupo al que pertenece la palabra
          */
         private int grp;
-
-
     }
 }
 

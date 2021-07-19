@@ -7,8 +7,6 @@ import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.Query;
 
-import java.util.ArrayList;
-
 public interface Api {
 
     @GET(Constants.ANAGRAM_ENDPOINT)

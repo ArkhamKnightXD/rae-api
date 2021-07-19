@@ -13,8 +13,6 @@ public class Constants {
     public static final String KEYS_ENDPOINT = "data/keys?callback=jsonp123";
     public static final String RANDOM_ENDPOINT = "data/random";
     public static final String SEARCH_ENDPOINT = "data/search?";
-    // unused
-    // public static final String TAGS_ENDPOINT = "data/search?m=16&f=1&t=200";
     public static final String ENDS_WITH_ENDPOINT = "data/search?m=32&f=1&t=200";
     public static final String WOTD_ENDPOINT = "data/wotd?callback=json";
 }
